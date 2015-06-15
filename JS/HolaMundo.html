@@ -1,0 +1,33 @@
+<!DOCTYPE>
+<html lang="es">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<title>Inicio de JQuery</title>
+	<!-- Importa la librer'ia JQuery a nuestro documento HTML5 -->
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script>
+
+	// Dolar representa la funcion JQuery a la cual
+	// pasaremos el elemento que deseemos ampliar
+	// las propiedades y metodos de JQ
+	// Cuando los elementos ya estan listos para ser usados
+	$(document).on('ready', function (){
+		// Selecciona el elemento prueba
+		// Text
+		$('#prueba').text('Hola mundo');
+		// Interpreta como documento HTML
+		$('.prueba').html('<strong>Estoy usando JQuery</strong>');
+
+	});
+	
+	</script>
+</head>
+
+<body>
+
+	<div id="prueba"></div>
+
+	<div class="prueba"></div>
+
+</body>
+</html>

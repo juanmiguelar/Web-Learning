@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+	<title>Eventos en js</title>
+	<meta charset="utf-8"/>
+	<!-- Se importa la libreria jQuery -->
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script>
+		$(document).on('ready', function(){
+			// Devuelve el codigo html
+			// O asigna lo que sea dentro del parrafo
+			//var almacen = $("#parrafo").html();
+			//alert(almacen);
+
+			// Coloca una clase a tal elemento
+			//var almacen = $("#prueba").attr("class", "ejemplo");
+			//alert(almacen);
+
+			// Este metodo sirve para OBTENER el id
+			var clase = $("#prueba").attr("id");
+			alert(clase);
+			// Este metodo ASIGNA un valor
+			$("#prueba").attr("class", "ejemplo");
+
+
+		});
+	</script>
+</head>
+<body>
+
+	<p id="parrafo">
+		<strong>Hola jQuery</strong>
+	</p>
+	<div id='prueba'></div>
+
+</body>
+</html>

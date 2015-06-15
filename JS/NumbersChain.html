@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Carrusel de numeros</title>
+	<!-- Importamos la libreria -->
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<!-- Importamos la clase Moves -->
+	<script src="Moves.js"></script>
+
+	<script>
+
+	var numeros; // Etiqueta h1
+	var next; // Boton siguiente
+	var above; // Boton anterior
+	var moves = new Moves(); // Creacion de objeto movimientos
+	
+
+	// Cuando el documento se cargue
+	$(document).on('ready', function(){
+
+		// Seleccionamos los elementos a utilizar
+		numeros = $('.number');
+		next = $('.next');
+		above = $('.above');
+
+		// Se muestra dentro de la etiqueta el numero actual
+		numeros.text(moves.getCurrentNumber());
+
+		// Evento, cada vez que el usuario haga click en el boton de siguiente
+		next.click(function(){
+			// El texto cambiara
+			numeros.text(moves.next());
+
+		});
+
+		// Evento, cada vez que el usuario haga click en el boton de anterior
+		above.click(function(){
+			numeros.text(moves.above());
+
+		});
+
+	});
+
+	</script>
+
+
+
+	<style type="text/css">
+	/* Centrar todo el body */
+	body{
+
+		text-align: center;
+
+	}
+
+	/* #number es la identificacion de la etiqueta donde se encuentra el numero */
+	#number{
+
+		color: red;
+		font-size: 50px;
+		font-style: bold;
+
+	}
+	</style>
+</head>
+<body>
+
+	<h1>Carrusel</h1>
+	<h3>Aplicacion para aprendizaje</h3>
+	<h3> JavaScript & jQuery</h3>
+
+	<button class="above">Anterior</button>
+	<button class="next">Siguente</button>
+
+	<section>
+		<h1 class="number" id="number">Numero random</h1>
+	</section>
+
+
+
+</body>
+</html>

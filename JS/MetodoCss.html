@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<head>
+	<title>Metodo CSS</title>
+	<meta charset="utf-8"/>
+	<!-- Se importa la libreria jQuery -->
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+
+	<script>
+
+	var seleccion;
+	// Cuando el documento esta cargado
+	// No se pueden hacer selecciones hasta que el documento es listo
+	$(document).on('ready', function(){
+
+		// Css funciona tanto como getter o como setter
+		$('body,html').css('background', '#FFF');
+
+		// Objeto jSon para cambiar varias propiedades a la vez
+		var cssH1 = {
+
+			'text-align' : 'center',
+			'color' : 'red'
+
+		}
+
+		// Cambio estilo del aliniamiento de texto
+		$('h1').css(cssH1);
+
+		var bgItem2 = $('#item2').css('background-color');
+		var cItem2 = $('#item2').css('color');
+
+		if (bgItem2 == cItem2) {
+			$('#item2').css('color', '#FFF');
+
+		};
+
+		
+
+
+
+	});
+
+	</script>
+	<style type="text/css">
+
+	body,html{
+
+		background: #CCC;
+		color: red;
+		font-family: Arial;
+		margin: 0;
+		padding: 0;
+
+	}
+
+	#item1{
+		background: #F6F6F6;
+		height: 50px;
+		margin: 5% auto;
+		width: 300px;
+
+	}
+
+	#item2{
+
+		display: block;
+		background: #000;
+		height: 50px;
+		margin: 5% auto;
+		width: 300px;
+
+
+	}
+
+
+	</style>
+
+
+
+</head>
+<body>
+	<h1>M&eacute;todo .css() de jQuery</h1>
+	<div id='item1'>Item1</div>
+	<div id='item2'>Item2</div>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+<head>
+	<meta charset='utf-8'> 
+	<title>Selectores</title>
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script>
+
+	$(document).on("ready", function() {
+		// body...
+		//div.miDiv es una seleccion de clase
+		// Estamos accediendo a todos los parrafos que estan en la etiqueta article
+
+		// Indicar que el cada uno son elementos separados
+		$('#par1, #par2, span').text("Hey somos iguales!");
+	});
+
+	</script>
+
+</head>
+<body>
+	<div class='miDiv'>
+		<article>
+			<p id="par1">Hola Jquery</p>
+		</article>
+	</div>
+	<div>
+		<article>
+			<p id="par2">Curso de codigo JS</p>
+		</article>
+	</div>
+	<span></span>
+</body>
+</html>

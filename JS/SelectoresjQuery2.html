@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Primeros pasos en jQuery</title>
+	<meta charset="utf-8"/>
+	<!-- Se importa la libreria jQuery -->
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+
+	<script>
+
+	var seleccion;
+	// Cuando el documento esta cargado
+	// No se pueden hacer selecciones hasta que el documento es listo
+	$(document).on('ready', function(){
+
+		// Selecciono el elemento .ejem1 y lo guardo en una variable
+		seleccion = $('.ejem1');
+
+		// Es verdadero si existe el objeto
+		// 0 es falso osea que no existe
+		// mayor que cero es verdadero
+		if (seleccion.length) {
+			console.log('Existen: ' + seleccion.length);
+		} else{
+			console.log('No existe el elemento seleccionado');
+		}
+
+		// Not vas a seleccionar el elemento que no tiene alguna clase
+		// Devuelve un objeto que tenga en este caso la clase ejem cl1
+		//seleccion.not('.cl1').text("Este elemento no tiene la clase cl1");
+
+		// Has que tenga un elemento dentro de una etiqueta
+		//seleccion.has('p').text("Este elemento tiene un p en su contenido");
+
+		// First
+		$('li').first().html('<strong>Soy el primero elemento</strong>');
+		$('li').eq(2).text('Soy el elemento numero 3');
+
+
+
+	});
+
+	</script>
+</head>
+<body>
+
+	<div class="ejem1 cl1">
+		<p></p>
+	</div>
+
+	<div class="ejem1">
+		<span></span>
+	</div>	
+
+	<ul>
+
+		<!-- Esto funciona como un arreglo 0 - 3 -->
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+
+</body>
+</html>
