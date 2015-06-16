@@ -6,64 +6,9 @@
 	<!-- Importamos la libreria -->
 	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
 	<!-- Importamos la clase Moves -->
-	<script src="Moves.js"></script>
-
-	<script>
-
-	var numeros; // Etiqueta h1
-	var next; // Boton siguiente
-	var back; // Boton anterior
-	var moves = new Moves(); // Creacion de objeto movimientos
-
-
-
-	// Cuando el documento se cargue
-	$(document).on('ready', function(){
-
-		// Seleccionamos los elementos a utilizar
-		numeros = $('#number');
-		next = $('#next');
-		back=document.getElementById("back");
-
-		// Se muestra dentro de la etiqueta el numero actual
-		numeros.text(moves.getCurrentNumber());
-
-		// Evento, cada vez que el usuario haga click en el boton de siguiente
-		next.click(function(){
-			// El texto cambiara
-			numeros.text(moves.next());
-
-		});
-
-		// Evento, cada vez que el usuario haga click en el boton de anterior
-		back.onclick = function(){
-			numeros.text(moves.back());
-			console.log("Si funciono");
-
-		};
-
-	});
-
-	</script>
-
-
-
-	<style type="text/css">
-	/* Centrar todo el body */
-	body{
-
-		text-align: center;
-
-	}
-
-	/* #number es la identificacion de la etiqueta donde se encuentra el numero */
-	#number{
-
-		color: red;
-		font-size: 50px;
-
-	}
-	</style>
+	<script type="text/javascript" src="Moves.js"></script>
+	<!-- Enlazamos nuestra hoja de estilos al documento -->
+	<link rel="stylesheet" type="text/css" href="ChainStyle.css">
 </head>
 <body>
 
@@ -77,8 +22,5 @@
 	<section>
 		<h1 id="number">Numero random</h1>
 	</section>
-
-
-
 </body>
 </html>

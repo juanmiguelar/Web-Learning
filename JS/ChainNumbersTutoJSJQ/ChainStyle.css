@@ -1,0 +1,14 @@
+/* Centrar todo el body */
+body{
+
+	text-align: center;
+
+}
+
+/* #number es la identificacion de la etiqueta donde se encuentra el numero */
+#number{
+
+	color: red;
+	font-size: 50px;
+
+}

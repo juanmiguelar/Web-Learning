@@ -1,3 +1,36 @@
+
+// Cuando el documento haya sido cargado
+$(document).on('ready', function(){
+
+	var numeros; // Etiqueta h1
+	var next; // Boton siguiente
+	var back; // Boton anterior
+	var moves = new Moves(); // Creacion de objeto movimientos
+
+		// Seleccionamos los elementos a utilizar
+		numeros = $('#number');
+		next = $('#next');
+		back=document.getElementById("back");
+
+		// Se muestra dentro de la etiqueta el numero actual
+		numeros.text(moves.getCurrentNumber());
+
+		// Evento, cada vez que el usuario haga click en el boton de siguiente
+		next.click(function(){
+			// El texto cambiara
+			numeros.text(moves.next());
+
+		});
+
+		// Evento, cada vez que el usuario haga click en el boton de anterior
+		back.onclick = function(){
+			numeros.text(moves.back());
+
+		};
+
+	});
+
+
 // Clase movimientos que se encarga de realizar los movimientos en el vector
 function Moves(){
 
