@@ -20,12 +20,12 @@ function Moves(){
 	};
 
 	// Devuelve el numero anterior al actual
-	this.above = function(){
+	this.back = function(){
 		// PROBLEMA 
 		// Condicion no funciona cuando se quiere pasar del primer elemento hasta el ultimo
 		// (index <= 0) realiza el cambio deseado luego de dos clicks
 		if (index <= 0) {
-			index = chain.length;
+			index = chain.length - 1;
 			return chain[index];
 
 		}else{

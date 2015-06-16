@@ -12,17 +12,18 @@
 
 	var numeros; // Etiqueta h1
 	var next; // Boton siguiente
-	var above; // Boton anterior
+	var back; // Boton anterior
 	var moves = new Moves(); // Creacion de objeto movimientos
-	
+
+
 
 	// Cuando el documento se cargue
 	$(document).on('ready', function(){
 
 		// Seleccionamos los elementos a utilizar
-		numeros = $('.number');
-		next = $('.next');
-		above = $('.above');
+		numeros = $('#number');
+		next = $('#next');
+		back=document.getElementById("back");
 
 		// Se muestra dentro de la etiqueta el numero actual
 		numeros.text(moves.getCurrentNumber());
@@ -35,10 +36,11 @@
 		});
 
 		// Evento, cada vez que el usuario haga click en el boton de anterior
-		above.click(function(){
-			numeros.text(moves.above());
+		back.onclick = function(){
+			numeros.text(moves.back());
+			console.log("Si funciono");
 
-		});
+		};
 
 	});
 
@@ -59,7 +61,6 @@
 
 		color: red;
 		font-size: 50px;
-		font-style: bold;
 
 	}
 	</style>
@@ -70,11 +71,11 @@
 	<h3>Aplicacion para aprendizaje</h3>
 	<h3> JavaScript & jQuery</h3>
 
-	<button class="above">Anterior</button>
-	<button class="next">Siguente</button>
+	<button id="back">Anterior</button>
+	<button id="next">Siguente</button>
 
 	<section>
-		<h1 class="number" id="number">Numero random</h1>
+		<h1 id="number">Numero random</h1>
 	</section>
 
 
