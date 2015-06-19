@@ -1,0 +1,22 @@
+#game{
+	/* Centrar el contenido del div game */
+	text-align: center;
+}
+
+#present-div{
+	/* Centrar el contenido del div presentacion */
+	text-align: center;
+}
+
+#tabla-juego{
+	/* Dar un borde solido y azul de un pixel a la tabla */
+	border: 1px solid blue;
+	margin: 0 auto;
+}
+
+tr td{
+	/* a todas las columnas creadas se les va a aplicar borde, largo y ancho */
+	border: 3px solid blue;
+	height: 50px;
+	width: 50px;
+}
